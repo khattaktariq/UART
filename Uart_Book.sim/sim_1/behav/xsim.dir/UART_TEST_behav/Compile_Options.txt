@@ -1,0 +1,1 @@
+-wto "a0d7ef929e0b4e94966009b837033021" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "UART_TEST_behav" "xil_defaultlib.UART_TEST" "xil_defaultlib.glbl" -log "elaborate.log" 

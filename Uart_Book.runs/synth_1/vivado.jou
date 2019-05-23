@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Thu May 23 23:06:11 2019
+# Process ID: 11276
+# Current directory: C:/Users/farha/Uart_Book/Uart_Book.runs/synth_1
+# Command line: vivado.exe -log UART_TEST.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_TEST.tcl
+# Log file: C:/Users/farha/Uart_Book/Uart_Book.runs/synth_1/UART_TEST.vds
+# Journal file: C:/Users/farha/Uart_Book/Uart_Book.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source UART_TEST.tcl -notrace
