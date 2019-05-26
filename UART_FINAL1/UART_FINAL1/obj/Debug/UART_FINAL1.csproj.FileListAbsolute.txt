@@ -1,0 +1,10 @@
+C:\Users\farha\source\repos\UART_FINAL1\UART_FINAL1\bin\Debug\UART_FINAL1.exe.config
+C:\Users\farha\source\repos\UART_FINAL1\UART_FINAL1\bin\Debug\UART_FINAL1.exe
+C:\Users\farha\source\repos\UART_FINAL1\UART_FINAL1\bin\Debug\UART_FINAL1.pdb
+C:\Users\farha\source\repos\UART_FINAL1\UART_FINAL1\obj\Debug\UART_FINAL1.csprojAssemblyReference.cache
+C:\Users\farha\source\repos\UART_FINAL1\UART_FINAL1\obj\Debug\UART_FINAL1.Form1.resources
+C:\Users\farha\source\repos\UART_FINAL1\UART_FINAL1\obj\Debug\UART_FINAL1.Properties.Resources.resources
+C:\Users\farha\source\repos\UART_FINAL1\UART_FINAL1\obj\Debug\UART_FINAL1.csproj.GenerateResource.cache
+C:\Users\farha\source\repos\UART_FINAL1\UART_FINAL1\obj\Debug\UART_FINAL1.csproj.CoreCompileInputs.cache
+C:\Users\farha\source\repos\UART_FINAL1\UART_FINAL1\obj\Debug\UART_FINAL1.exe
+C:\Users\farha\source\repos\UART_FINAL1\UART_FINAL1\obj\Debug\UART_FINAL1.pdb
