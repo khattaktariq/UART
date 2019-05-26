@@ -1,0 +1,537 @@
+
+*** Running vivado
+    with args -log UARTLoopback.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source UARTLoopback.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+  **** IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source UARTLoopback.tcl -notrace
+Command: synth_design -top UARTLoopback -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9732 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 324.594 ; gain = 114.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'UARTLoopback' [C:/Users/farha/Downloads/UARTLoopback.v:1]
+INFO: [Synth 8-638] synthesizing module 'UART' [C:/Users/farha/Downloads/UART.v:30]
+	Parameter FREQ bound to: 100000000 - type: integer 
+	Parameter BAUD bound to: 115200 - type: integer 
+	Parameter RX_IDLE bound to: 3'b000 
+	Parameter RX_START bound to: 3'b001 
+	Parameter RX_DATA bound to: 3'b010 
+	Parameter RX_STOP bound to: 3'b011 
+	Parameter RX_FULL bound to: 3'b100 
+	Parameter RX_ERROR bound to: 3'b101 
+	Parameter TX_IDLE bound to: 3'b000 
+	Parameter TX_START bound to: 3'b001 
+	Parameter TX_DATA bound to: 3'b010 
+	Parameter TX_STOP0 bound to: 3'b011 
+	Parameter TX_STOP1 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "one-hot" *) [C:/Users/farha/Downloads/UART.v:75]
+INFO: [Synth 8-638] synthesizing module 'ClockDiv' [C:/Users/farha/Downloads/ClockDiv.v:17]
+	Parameter FREQ_I bound to: 100000000 - type: integer 
+	Parameter FREQ_O bound to: 345600 - type: integer 
+	Parameter PHASE bound to: 1'b1 
+	Parameter MAX_PPM bound to: 50000 - type: integer 
+	Parameter INIT bound to: 32'sb00000000000000000000000010001111 
+	Parameter ACTUAL_FREQ_O bound to: 347222 - type: integer 
+	Parameter PPM bound to: 64'b0000000000000000000000000000000000000000000000000001001001010101 
+INFO: [Synth 8-256] done synthesizing module 'ClockDiv' (1#1) [C:/Users/farha/Downloads/ClockDiv.v:17]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/farha/Downloads/UART.v:80]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/farha/Downloads/UART.v:111]
+INFO: [Synth 8-638] synthesizing module 'ClockDiv__parameterized0' [C:/Users/farha/Downloads/ClockDiv.v:17]
+	Parameter FREQ_I bound to: 100000000 - type: integer 
+	Parameter FREQ_O bound to: 115740 - type: integer 
+	Parameter PHASE bound to: 1'b0 
+	Parameter MAX_PPM bound to: 50000 - type: integer 
+	Parameter INIT bound to: 32'sb00000000000000000000000110101111 
+	Parameter ACTUAL_FREQ_O bound to: 115740 - type: integer 
+	Parameter PPM bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'ClockDiv__parameterized0' (1#1) [C:/Users/farha/Downloads/ClockDiv.v:17]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/farha/Downloads/UART.v:190]
+INFO: [Synth 8-256] done synthesizing module 'UART' (2#1) [C:/Users/farha/Downloads/UART.v:30]
+INFO: [Synth 8-256] done synthesizing module 'UARTLoopback' (3#1) [C:/Users/farha/Downloads/UARTLoopback.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 360.996 ; gain = 150.676
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 360.996 ; gain = 150.676
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:10]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:10]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'rst'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rst'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rxd'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rxd'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'txd'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'txd'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[0]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[0]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[1]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[1]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[2]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[2]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[3]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[3]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[4]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[4]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[5]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[5]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[6]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[6]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[7]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_data[7]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_int'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rx_int'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_busy'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_busy'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_int'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_int'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[0]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[0]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[1]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[1]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[2]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[2]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[3]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[3]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[4]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[4]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[5]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[5]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[6]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[6]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[7]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_data[7]'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'loopback'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'loopback'. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/farha/Downloads/digilent-xdc-master/digilent-xdc-master/Nexys-4-Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 667.340 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "clk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'UART'
+INFO: [Synth 8-802] inferred FSM for state register 'tx_state_reg' in module 'UART'
+INFO: [Synth 8-5544] ROM "rx_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tx_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rx_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rx_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 RX_IDLE |                              000 |                              000
+                RX_START |                              001 |                              001
+                 RX_DATA |                              010 |                              010
+                 RX_STOP |                              011 |                              011
+                 RX_FULL |                              100 |                              100
+                  iSTATE |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'sequential' in module 'UART'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 TX_IDLE |                              000 |                              000
+                TX_START |                              001 |                              001
+                 TX_DATA |                              010 |                              010
+                TX_STOP0 |                              011 |                              011
+                TX_STOP1 |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'tx_state_reg' using encoding 'sequential' in module 'UART'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module UARTLoopback 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module ClockDiv 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ClockDiv__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module UART 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   5 Input      8 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   6 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "uart/rx_sampler_clk_div/clk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "uart/tx_sampler_clk_div/clk" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3332] Sequential element (uart/rx_sampler_clk_div/cnt_reg[8]) is unused and will be removed from module UARTLoopback.
+WARNING: [Synth 8-3332] Sequential element (uart/tx_sampler_clk_div/cnt_reg[9]) is unused and will be removed from module UARTLoopback.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     5|
+|3     |LUT2 |     8|
+|4     |LUT3 |    12|
+|5     |LUT4 |     9|
+|6     |LUT5 |    14|
+|7     |LUT6 |    17|
+|8     |FDCE |    22|
+|9     |FDPE |     2|
+|10    |FDRE |    44|
+|11    |IBUF |     2|
+|12    |OBUF |    11|
++------+-----+------+
+
+Report Instance Areas: 
++------+-----------------------+-------------------------+------+
+|      |Instance               |Module                   |Cells |
++------+-----------------------+-------------------------+------+
+|1     |top                    |                         |   147|
+|2     |  uart                 |UART                     |   124|
+|3     |    rx_sampler_clk_div |ClockDiv                 |    20|
+|4     |    tx_sampler_clk_div |ClockDiv__parameterized0 |    23|
++------+-----------------------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 667.340 ; gain = 457.020
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 667.340 ; gain = 112.352
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 667.340 ; gain = 457.020
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 51 Warnings, 49 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 667.340 ; gain = 426.973
+INFO: [Common 17-1381] The checkpoint 'C:/Users/farha/UART_F/UART_F.runs/synth_1/UARTLoopback.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.025 . Memory (MB): peak = 667.340 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun May 26 12:29:09 2019...

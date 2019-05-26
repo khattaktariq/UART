@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Sun May 26 12:28:28 2019
+# Process ID: 6564
+# Current directory: C:/Users/farha/UART_F/UART_F.runs/synth_1
+# Command line: vivado.exe -log UARTLoopback.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source UARTLoopback.tcl
+# Log file: C:/Users/farha/UART_F/UART_F.runs/synth_1/UARTLoopback.vds
+# Journal file: C:/Users/farha/UART_F/UART_F.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source UARTLoopback.tcl -notrace
